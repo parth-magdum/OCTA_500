@@ -45,9 +45,9 @@ for name_model in models:
     root_result_model = os.path.join(root_result, name_model)
     if not os.path.exists(root_result_model):
         os.mkdir(root_result_model)
-    # foo = models[name_model]()
-    # total = sum([param.nelement() for param in foo.parameters()])
-    # print("Model:{}, Number of parameter: {:.3f}M".format(name_model, total/1e6))
+    foo = models[name_model]()
+    total = sum([param.nelement() for param in foo.parameters()])
+    print("Model:{}, Number of parameter: {:.3f}M".format(name_model, total/1e6))
     # continue
     # 在各个训练集上训练
     for name_dataset in all_dataset:

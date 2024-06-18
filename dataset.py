@@ -38,11 +38,11 @@ def prepareDatasets():
         "val":SegmentationDataset(os.path.join(path_OCTA500_3M, "val")),
         "test":SegmentationDataset(os.path.join(path_OCTA500_3M,"test"))
     }
-    # all_datasets['ROSSA'] = {
-    #     "train":SegmentationDataset([os.path.join(path_ROSSA, x) for x in ["train_manual", "train_sam"]], ),
-    #     "val":SegmentationDataset(os.path.join(path_ROSSA, "val")),
-    #     "test":SegmentationDataset(os.path.join(path_ROSSA,"test"))
-    # }
+    all_datasets['ROSSA'] = {
+        "train":SegmentationDataset([os.path.join(path_ROSSA, x) for x in ["train_manual", "train_sam"]], ),
+        "val":SegmentationDataset(os.path.join(path_ROSSA, "val")),
+        "test":SegmentationDataset(os.path.join(path_ROSSA,"test"))
+    }
     # More datasets can be added here......
     return all_datasets
 
